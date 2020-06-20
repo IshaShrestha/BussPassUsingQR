@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1059022858391",
+    "firebase_url": "https://buspassusingqr.firebaseio.com",
+    "project_id": "buspassusingqr",
+    "storage_bucket": "buspassusingqr.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1059022858391:android:1215b965ba7c5e7206e1d2",
+        "android_client_info": {
+          "package_name": "com.example.busspassusingqr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1059022858391-9ifc6a3jano86iu3asqqllk9q7kpjvc5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.busspassusingqr",
+            "certificate_hash": "2613d1d6921b620f04439ebbc83783cf22a17af4"
+          }
+        },
+        {
+          "client_id": "1059022858391-n8q6lehfnm3855dldg0bople97991jus.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCX4b37pLAr7TPV8dUch3d23gYpxop84IM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1059022858391-n8q6lehfnm3855dldg0bople97991jus.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
