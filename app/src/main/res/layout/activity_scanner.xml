@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".QrScanner">
+
+
+    <TextView
+        android:id="@+id/scan_logo"
+        android:layout_width="372dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="100dp"
+        android:fontFamily="@font/indigo_daisy"
+        android:gravity="center_horizontal"
+        android:text="Welcome This Is your QR Code Scanner"
+        android:textAlignment="center"
+        android:textSize="50sp" />
+
+    <TextView
+        android:id="@+id/scan_subtitle"
+        android:layout_width="261dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="200dp"
+        android:gravity="center_horizontal"
+        android:fontFamily="@font/roboto_regular"
+        android:text="Please Scan The QR Code "
+        android:textSize="17sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="254dp"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/btn_scanner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="60dp"
+            android:background="@drawable/btn_custom"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/btn_scan"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+
+</LinearLayout>

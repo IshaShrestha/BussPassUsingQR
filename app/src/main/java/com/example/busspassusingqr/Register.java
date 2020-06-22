@@ -1,4 +1,7 @@
 package com.example.busspassusingqr;
 
-public class Register {
+import android.support.v7.app.AppCompatActivity;
+
+public class Register extends AppCompatActivity {
+
 }

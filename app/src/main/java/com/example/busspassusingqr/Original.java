@@ -14,6 +14,7 @@ public class Original extends AppCompatActivity {
     private FirebaseAuth.AuthStateListener mAuthListener;
     private Object FirebaseAuth;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
