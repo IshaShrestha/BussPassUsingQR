@@ -7,6 +7,7 @@
     android:orientation="vertical"
     tools:context=".Register">
 
+
     <TextView
         android:id="@+id/tv_logo"
         android:layout_width="wrap_content"
@@ -33,7 +34,7 @@
         android:layout_marginLeft="25dp" />
 
     <EditText
-        android:id="@+id/et_name"
+        android:id="@+id/name"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:hint="@string/your_name"
@@ -47,7 +48,7 @@
         android:textSize="15sp" />
 
     <EditText
-        android:id="@+id/et_email"
+        android:id="@+id/email"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:hint="@string/e_mail"
@@ -61,7 +62,7 @@
         android:textSize="15sp" />
 
     <EditText
-        android:id="@+id/et_password"
+        android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:hint="@string/password"
@@ -75,7 +76,7 @@
         android:textSize="15sp" />
 
     <EditText
-        android:id="@+id/et_repassword"
+        android:id="@+id/repassword"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:hint="@string/re_type_password"
@@ -90,9 +91,12 @@
 <Spinner
     android:id="@+id/spinner1"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_alignParentTop="true"
-    android:layout_centerHorizontal="true"/>
+    android:layout_height="50dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:hint="@string/type"
+    android:layout_marginBottom="10dp"
+    android:padding="15dp"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
