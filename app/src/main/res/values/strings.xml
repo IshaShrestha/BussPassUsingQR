@@ -15,5 +15,6 @@
     <string name="type">Select usertype</string>
 
     <string name="btn_scan">Scan</string>
+    <string name="btn_pay">Ticket</string>
 
 </resources>
