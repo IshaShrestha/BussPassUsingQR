@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.busspassusingqr">
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-feature android:name="com.android.hardware.Camera.focus"/>
 
@@ -13,7 +15,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+
+        <activity android:name=".QrScanner">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,16 +24,9 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".QrScanner">
-            <intent-filter>
-                <action android:screenOrientation="portrait"
-                tools:replace="screenorientation"/>
-            </intent-filter>
-
-        </activity>
-
-
-
+        <meta-data
+            android:name="com.google.firebase.ml.vision.DEPENDENCIES"
+            android:value="barcode" />
 
 
 

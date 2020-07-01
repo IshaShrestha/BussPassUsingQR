@@ -51,7 +51,9 @@
             android:background="@drawable/btn_custom"
             android:fontFamily="@font/roboto_regular"
             android:text="@string/btn_scan"
-            android:textColor="@android:color/white" />
+            android:onClick="barcodeReco"
+            android:textColor="@android:color/white"
+            tools:ignore="OnClick" />
     </RelativeLayout>
 
 </LinearLayout>
