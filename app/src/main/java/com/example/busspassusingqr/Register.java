@@ -33,6 +33,7 @@ public class Register extends AppCompatActivity implements AdapterView.OnItemCli
     private Spinner spinner;
     private Button register;
     private TextView login;
+    private static final String TAG = "YOUR-TAG-NAME";
 
 
 
@@ -49,6 +50,7 @@ public class Register extends AppCompatActivity implements AdapterView.OnItemCli
         pass = (EditText) findViewById(R.id.password);
         repass = (EditText) findViewById(R.id.repassword);
         register = (Button) findViewById(R.id.btn_register);
+        login =(TextView) findViewById(R.id.swipeLeft);
 
 
         final List<String> type = new ArrayList<String>();
@@ -77,74 +79,102 @@ public class Register extends AppCompatActivity implements AdapterView.OnItemCli
 
 
         register.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                final String type = spinner.getSelectedItem().toString();
-                final String fullname = name.getText().toString().trim();
-                final String Email = email.getText().toString().trim();
-                String password = pass.getText().toString().trim();
-                String repassword = repass.getText().toString().trim();
-
-
-                    if (TextUtils.isEmpty(fullname)) {
-                        name.setError("name is required");
-                        return;
-                    }
-                    if (TextUtils.isEmpty(Email)) {
-                        email.setError("email is required");
-                        return;
-                    }
-                    if (password.length() < 6) {
-                        pass.setError("password must be greater than 6 character");
-                    }
-                    if (TextUtils.isEmpty(password)) {
-                        Toast.makeText(Register.this, "Please Enter Password", Toast.LENGTH_SHORT).show();
-                    }
-                    if (TextUtils.isEmpty(repassword)) {
-                        Toast.makeText(Register.this, "please Enter Repassword", Toast.LENGTH_SHORT).show();
-                    }
-
-
-                firebaseAuth.createUserWithEmailAndPassword(Email, password)
-                        .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                            @Override
-                            public void onComplete(@NonNull Task<AuthResult> task) {
-                                if (task.isSuccessful()) {
-                                    user info = new user(
-                                            name,
-                                            email
-                                    );
-                                    FirebaseDatabase.getInstance().getReference("users")
-                                            .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                                            .setValue(info).addOnCompleteListener(new OnCompleteListener<Void>() {
                                         @Override
-                                        public void onComplete(@NonNull Task<Void> task) {
-                                            Toast.makeText(Register.this, "Registration complete", Toast.LENGTH_SHORT).show();
-                                            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                                        public void onClick(View v) {
+                                            final String type = spinner.getSelectedItem().toString();
+                                            final String fullname = name.getText().toString().trim();
+                                            final String Email = email.getText().toString().trim();
+                                            String password = pass.getText().toString().trim();
+                                            String repassword = repass.getText().toString().trim();
+
+
+                                            if (TextUtils.isEmpty(fullname)) {
+                                                name.setError("name is required");
+                                                return;
+                                            }
+                                            if (TextUtils.isEmpty(Email)) {
+                                                email.setError("email is required");
+                                                return;
+                                            }
+                                            if (password.length() < 6) {
+                                                pass.setError("password must be greater than 6 character");
+                                            }
+                                            if (TextUtils.isEmpty(password)) {
+                                                Toast.makeText(Register.this, "Please Enter Password", Toast.LENGTH_SHORT).show();
+                                            }
+                                            if (TextUtils.isEmpty(repassword)) {
+                                                Toast.makeText(Register.this, "please Enter Repassword", Toast.LENGTH_SHORT).show();
+                                            }
+
+
+                                            firebaseAuth.createUserWithEmailAndPassword(Email, password)
+                                                    .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                                                        @Override
+                                                        public void onComplete(@NonNull Task<AuthResult> task) {
+                                                            if (task.isSuccessful()) {
+                                                                user info = new user(
+                                                                        name,
+                                                                        email
+                                                                );
+                                                                FirebaseDatabase.getInstance().getReference("users")
+                                                                        .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                                                                        .setValue(info).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                                                    @Override
+                                                                    public void onComplete(@NonNull Task<Void> task) {
+
+                                                                        Toast.makeText(Register.this, "Registration complete", Toast.LENGTH_SHORT).show();
+                                                                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                                                                    }
+
+
+                                                                });
+                                                            }
+
+
+                                                        }
+                                                    });
+
+
                                         }
                                     });
-                                }
-
-
-                            }
-                        });
+            login.setOnClickListener(new View.OnClickListener() {
+                     @Override
+                    public void onClick(View v) {
+                    Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+                    startActivity(intent);
             }
         });
-login.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View v) {
-        Intent intent = new Intent(getApplicationContext(),MainActivity.class);
-        startActivity(intent);
+//        final FirebaseUser user = firebaseAuth.getCurrentUser();
+//        if (!user.isEmailVerified()) {
+//            user.sendEmailVerification()
+//                    .addOnCompleteListener(this, new OnCompleteListener<Void>() {
+//                        @Override
+//                        public void onComplete(@NonNull Task<Void> task) {
+//
+//                            if (task.isSuccessful()) {
+//                                Toast.makeText(getApplicationContext(),
+//                                        "Verification email sent to " + user.getEmail(),
+//                                        Toast.LENGTH_SHORT).show();
+//                                Log.d("Verification", "Verification email sent to " + user.getEmail());
+//                            } else {
+//                                Log.e(TAG, "sendEmailVerification", task.getException());
+//                                Toast.makeText(getApplicationContext(),
+//                                        "Failed to send verification email.",
+//                                        Toast.LENGTH_SHORT).show();
+//                            }
+//                        }
+//                    });
+//
+//    }
     }
-});
-
-    }
-
-
-
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
     }
 }
+
+
+
+
+

@@ -51,7 +51,7 @@ public class MainActivity<mAuth> extends AppCompatActivity {
                         }
                         else{
                             Toast.makeText(MainActivity.this,"login successful",Toast.LENGTH_LONG).show();
-                            startActivity(new Intent(getApplicationContext(), home.class));
+                            startActivity(new Intent(getApplicationContext(), ScanActivity1.class));
                         }
                     }
                 });
