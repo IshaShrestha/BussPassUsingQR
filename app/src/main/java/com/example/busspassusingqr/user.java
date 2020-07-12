@@ -1,20 +1,20 @@
 package com.example.busspassusingqr;
 
-import android.widget.EditText;
-
 public class user {
 
     private String name;
     private String email;
     private String type;
-    public user(EditText name, EditText email){
 
+    public String getType() {
+        return type;
     }
 
-    public user(String name, String email, String type) {
-        this.name = name;
-        this.email = email;
+    public void setType(String type) {
         this.type = type;
+    }
+
+    public user() {
     }
 
     public String getName() {
@@ -31,13 +31,5 @@ public class user {
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
     }
 }

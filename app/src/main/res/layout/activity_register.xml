@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout
-xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:orientation="vertical"
-tools:context=".Register">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".Register">
 
 
 <TextView
@@ -19,7 +19,7 @@ tools:context=".Register">
     android:layout_marginStart="25dp"
     android:layout_marginBottom="5dp"
     android:fontFamily="@font/indigo_daisy"
-    android:layout_marginTop="60dp"
+    android:layout_marginTop="20dp"
     android:gravity="center_horizontal"
     android:layout_marginLeft="25dp" />
 
@@ -41,9 +41,7 @@ tools:context=".Register">
     android:hint="@string/your_name"
     android:layout_marginLeft="20dp"
     android:layout_marginRight="20dp"
-    android:layout_marginBottom="10dp"
-    android:padding="15dp"
-    style="@android:style/Widget.EditText"
+    android:padding="5dp"
     android:inputType="textPersonName"
     android:fontFamily="@font/roboto_regular"
     android:textSize="15sp" />
@@ -57,27 +55,25 @@ tools:context=".Register">
     android:layout_marginRight="20dp"
     android:layout_marginBottom="10dp"
     android:padding="15dp"
-    style="@android:style/Widget.EditText"
+
     android:fontFamily="@font/roboto_regular"
     android:inputType="textEmailAddress"
-
     android:textSize="15sp" />
 
-<EditText
-    android:id="@+id/password"
-    android:layout_width="match_parent"
-    android:layout_height="50dp"
-    android:hint="@string/password"
-    android:layout_marginLeft="20dp"
-    android:layout_marginRight="20dp"
-    android:layout_marginBottom="10dp"
-    android:padding="15dp"
-    style="@android:style/Widget.EditText"
-    android:fontFamily="@font/roboto_regular"
-    android:inputType="textPassword"
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="@string/password"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:padding="15dp"
 
-    android:textSize="15sp" />
+        android:fontFamily="@font/roboto_regular"
+        android:inputType="textPassword"
 
+        android:textSize="15sp" />
 <EditText
     android:id="@+id/repassword"
     android:layout_width="match_parent"
@@ -86,23 +82,63 @@ tools:context=".Register">
     android:layout_marginLeft="20dp"
     android:layout_marginRight="20dp"
     android:padding="15dp"
-    style="@android:style/Widget.EditText"
     android:fontFamily="@font/roboto_regular"
     android:inputType="textPassword"
     android:textSize="15sp" />
 
-<Spinner
-    android:id="@+id/spinner1"
-    style="@android:style/Widget.Spinner"
-    android:layout_width="match_parent"
-    android:layout_height="50dp"
-    android:layout_marginLeft="20dp"
-    android:layout_marginRight="20dp"
-    android:hint="@string/type"
-    android:layout_marginTop="10dp"
-    android:padding="15dp"/>
 
-<RelativeLayout
+    <RadioGroup
+        android:id="@+id/radioButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       >
+
+        <RadioButton
+            android:id="@+id/radioButton1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+            android:background="?android:selectableItemBackground"
+            android:layoutDirection="rtl"
+            android:layout_gravity="start"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:textAlignment="textStart"
+            android:text="Driver"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+            android:background="?android:selectableItemBackground"
+            android:layoutDirection="rtl"
+            android:layout_gravity="start"
+            android:textAlignment="textStart"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="Passenger"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+            android:background="?android:selectableItemBackground"
+            android:layoutDirection="rtl"
+            android:layout_gravity="start"
+            android:textAlignment="textStart"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="Admin"
+            android:textSize="15sp" />
+    </RadioGroup>
+    <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="0dp"
     android:layout_weight="1">
@@ -115,7 +151,7 @@ tools:context=".Register">
         android:fontFamily="@font/roboto_regular"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="20dp"
         android:layout_centerInParent="true"
         android:textColor="@android:color/white"
         android:text="@string/register"/>
