@@ -91,7 +91,7 @@ public class MainActivity<mAuth> extends AppCompatActivity {
                                         startActivity(intent);
                                         finish();
                                     }else if(userType.equals("Passenger")){
-                                        Intent intent = new Intent(MainActivity.this, Passenger.class);
+                                        Intent intent = new Intent(MainActivity.this, UserActivity.class);
                                         startActivity(intent);
                                         finish();
                                     }

@@ -30,7 +30,7 @@
         </activity>
         <activity android:name=".ScanActivity1"/>
         <activity android:name=".ScanActivity2"/>
-        <activity android:name=".Passenger"/>
+        <activity android:name=".UserActivity"/>
 
 
     </application>
