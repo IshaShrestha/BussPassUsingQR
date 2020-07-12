@@ -11,7 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="icon, label">
-        <activity android:name=".UserActivity"></activity>
+        <activity android:name=".UserActivity">
+
+        </activity>
         <activity android:name=".ScanActivity2" />
         <activity android:name=".ScanActivity1" />
         <activity android:name=".MainActivity">
