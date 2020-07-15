@@ -73,22 +73,24 @@
         android:layout_height="46dp"
         android:layout_marginLeft="25dp"
         android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
 
         />
 
-    <Button
-        android:id="@+id/btn_pay"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="40dp"
+
+    <com.khalti.widget.KhaltiButton
+        android:id="@+id/khalti_button"
+        android:layout_width="349dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="25dp"
         android:background="@drawable/btn_custom"
         android:fontFamily="@font/roboto_regular"
-        android:text="@string/btn_pay"
-        android:layout_marginTop="40dp"
-        android:textColor="@android:color/white" />
+        android:textColor="@android:color/white"
+        />
+
 
 
 </LinearLayout>
+
+
+

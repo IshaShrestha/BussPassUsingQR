@@ -20,6 +20,12 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
 }
 
 dependencies {
@@ -37,9 +43,16 @@ dependencies {
     //noinspection GradleCompatible
     implementation 'com.google.android.gms:play-services-auth:16.0.1'
     implementation 'me.dm7.barcodescanner:zxing:1.9'
+    implementation ('com.khalti:khalti-android:2.00.01') {
+        transitive = true
+    }
+
+
+
     //noinspection GradleCompatible
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
 
 
 }
