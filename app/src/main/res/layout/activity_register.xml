@@ -123,20 +123,6 @@
             android:text="Passenger"
             android:textSize="15sp" />
 
-        <RadioButton
-            android:id="@+id/radioButton3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:button="@null"
-            android:drawableRight="?android:attr/listChoiceIndicatorSingle"
-            android:background="?android:selectableItemBackground"
-            android:layoutDirection="rtl"
-            android:layout_gravity="start"
-            android:textAlignment="textStart"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:text="Admin"
-            android:textSize="15sp" />
     </RadioGroup>
     <RelativeLayout
         android:layout_width="match_parent"
