@@ -77,16 +77,18 @@
 
         />
 
-
-    <com.khalti.widget.KhaltiButton
-        android:id="@+id/khalti_button"
-        android:layout_width="349dp"
-        android:layout_height="70dp"
-        android:layout_marginLeft="25dp"
+    <Button
+        android:id="@+id/btn_pay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_password"
         android:background="@drawable/btn_custom"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp"
         android:fontFamily="@font/roboto_regular"
         android:textColor="@android:color/white"
-        />
+        android:text="@string/btn_pay"/>
 
 
 

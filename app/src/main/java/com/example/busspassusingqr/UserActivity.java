@@ -29,7 +29,7 @@ import javax.sql.DataSource;
 public class UserActivity extends AppCompatActivity {
     private Spinner spinner1, spinner2, spinner3;
     private DatabaseReference mDatabase;
-    private Button khalti_button;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
