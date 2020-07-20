@@ -55,7 +55,7 @@ public class Register extends AppCompatActivity {
         login =(TextView) findViewById(R.id.swipeLeft);
         radioGroup = (RadioGroup)findViewById(R.id.radioButton);
         // RadioButton uType =(RadioButton) findViewById(radioGroup.getCheckedRadioButtonId());
-        final user users = new user();
+        final User users = new User();
         mProgress = new ProgressDialog(this);
         mProgress.setTitle("Processing...");
         mProgress.setMessage("Please wait...");
@@ -76,8 +76,6 @@ public class Register extends AppCompatActivity {
                 final String Email = email.getText().toString().trim();
                 String password = pass.getText().toString().trim();
                 String repassword = repass.getText().toString().trim();
-
-
 
                 if (TextUtils.isEmpty(fullname)) {
                     name.setError("name is required");
@@ -100,9 +98,6 @@ public class Register extends AppCompatActivity {
                     repass.setError("Password Not matching");
                     return;
                 }
-
-
-
 
                 firebaseAuth.createUserWithEmailAndPassword(Email, password)
                         .addOnCompleteListener(new OnCompleteListener<AuthResult>() {

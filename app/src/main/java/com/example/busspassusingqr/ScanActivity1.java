@@ -8,15 +8,20 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class ScanActivity1 extends AppCompatActivity {
-    public static TextView scan_logo, scan_subtitle;
+    public static TextView scan_logo, source, destination, amount;
     Button btn_scanner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scan1);
-        scan_subtitle=(TextView)findViewById(R.id.scan_subtitle);
-        btn_scanner=(Button)findViewById(R.id.btn_scanner);
+
+        source = findViewById(R.id.source);
+        destination = findViewById(R.id.destination);
+        amount = findViewById(R.id.amount);
+
+        btn_scanner = (Button) findViewById(R.id.btn_scanner);
+
         btn_scanner.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {

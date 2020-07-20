@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout
+<RelativeLayout
 
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -24,36 +24,47 @@
         android:textAlignment="center"
         android:textSize="50sp" />
 
-    <TextView
-        android:id="@+id/scan_subtitle"
-        android:layout_width="261dp"
-        android:layout_height="219dp"
-        android:layout_marginStart="70dp"
-        android:layout_marginLeft="25dp"
-        android:layout_marginBottom="20dp"
-        android:fontFamily="@font/roboto_regular"
-        android:gravity="center_horizontal"
-        android:text="Please Scan The QR Code "
-        android:textSize="17sp" />
-
-    <RelativeLayout
+    <Button
+        android:id="@+id/btn_scanner"
         android:layout_width="match_parent"
-        android:layout_height="254dp"
-        android:layout_weight="1">
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="500dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/btn_custom"
+        android:fontFamily="@font/roboto_regular"
+        android:onClick="barcodeReco"
+        android:text="@string/btn_scan"
+        android:textColor="@android:color/white"
+        tools:ignore="OnClick" />
 
-        <Button
-            android:id="@+id/btn_scanner"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginBottom="20dp"
-            android:background="@drawable/btn_custom"
-            android:fontFamily="@font/roboto_regular"
-            android:text="@string/btn_scan"
-            android:onClick="barcodeReco"
-            android:textColor="@android:color/white"
-            tools:ignore="OnClick" />
-    </RelativeLayout>
+    <TextView
+        android:id="@+id/source"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="276dp"
+        android:text="Source" />
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/destination"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="328dp"
+        android:text="Destination" />
+
+    <TextView
+        android:id="@+id/amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="297dp"
+        android:text="Amount" />
+
+</RelativeLayout>

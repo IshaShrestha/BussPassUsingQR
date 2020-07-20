@@ -1,10 +1,14 @@
 package com.example.busspassusingqr;
 
-public class user {
+public class User {
 
     private String name;
     private String email;
     private String type;
+    private int balance = 100;
+
+    public User() {
+    }
 
     public String getType() {
         return type;
@@ -12,9 +16,6 @@ public class user {
 
     public void setType(String type) {
         this.type = type;
-    }
-
-    public user() {
     }
 
     public String getName() {
@@ -31,5 +32,13 @@ public class user {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public int getBalance() {
+        return balance;
+    }
+
+    public void setBalance(int balance) {
+        this.balance = balance;
     }
 }
